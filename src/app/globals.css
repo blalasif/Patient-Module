@@ -1,0 +1,351 @@
+/* styles/globals.css */
+@import '@fontsource/inter/index.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --lg: 3.125rem;
+  --h1: 2.625rem;
+  --h2: 2rem;
+  --h3: 1.5rem;
+  --h4: 1.625rem;
+  --h5: 1.25rem;
+  --h6: 1rem;
+  --sm: 0.875rem;
+  --xs: 0.75rem;
+}
+
+/* global styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Underline Style */
+.underline-dark-sky {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: theme('colors.dark-sky');
+  /* Use Tailwind's color utility */
+}
+
+.underline-dark-sky::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5px;
+  width: 100%;
+  height: 1.2px;
+  background-color: theme('colors.dark-sky');
+  /* Use Tailwind's color utility */
+}
+
+/* Date Input Styles */
+.date-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Style for the DatePicker input field */
+.react-datepicker__input-container input {
+  width: 100% !important;
+  height: 55px !important;
+  box-sizing: border-box !important;
+  border-radius: 12px !important;
+  /* background-color: theme('colors.sky-blue'); */
+  /* Use Tailwind's color utility */
+  color: inherit !important;
+  outline: none;
+}
+
+/* Custom Checkbox Styles */
+/* .checkbox-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid theme('colors.gray');
+  background-color: theme('colors.white');
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+  width: 22px;
+  height: 22px;
+}
+
+.checkbox-custom.checked {
+  background-color: theme('colors.dark-sky');
+  border-color: theme('colors.dark-sky');
+}
+
+.checkbox-custom.checked::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 12px;
+  position: absolute;
+  border: solid theme('colors.white');
+  border-width: 0 3px 3px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+} */
+
+
+.checkbox-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid theme('colors.gray');
+  background-color: theme('colors.white');
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+  width: 22px;
+  height: 22px;
+}
+
+/* Custom Checkbox Styles for Checked State */
+.checkbox-custom.checked {
+  background-color: theme('colors.dark-sky');
+  border-color: theme('colors.dark-sky');
+}
+
+/* Add the Tick Mark */
+.checkbox-custom.checked::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 12px;
+  position: absolute;
+  border: solid theme('colors.white');
+  border-width: 0 3px 3px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Ensure checkbox is square on mobile devices */
+@media (max-width: 640px) {
+  .checkbox-custom {
+    width: 20px;
+    border-radius: 5.5px;
+    /* Adjust this value as needed */
+    height: 20px;
+    /* Ensure width and height are equal */
+  }
+}
+
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 7px;
+  /* Width of the scrollbar */
+  height: 50px;
+  /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: theme('colors.dark-sky');
+  /* Scrollbar thumb color */
+  border-radius: 12px;
+  /* Roundness of the scrollbar thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: theme('colors.light-gray');
+  /* Background color of the track */
+  border-radius: 12px;
+  /* Roundness of the scrollbar track */
+}
+
+/* styles/global.css or a CSS module */
+/* styles/globals.css */
+
+/* Gradient Shadow for Bottom */
+.gradient-shadow-bottom {
+  background: linear-gradient(180deg, #969696 0%, #FFF 100%);
+  opacity: 0.2;
+}
+
+.background-footer {
+  background: linear-gradient(360deg, #121337 -4.22%, #010101 8.95%);
+
+}
+
+
+.text-btn-gradient {
+  background: linear-gradient(45deg, #2FAEF5, #1140FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+
+/* global styles or in a CSS module */
+/* global styles or in a CSS module */
+/* global styles or in a CSS module */
+/* styles.css or your CSS module */
+.dropdown-item {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #d0e2f2;
+  /* fade-blue */
+  color: white;
+}
+
+.dropdown-item:hover .icon {
+  stroke: white;
+}
+
+
+
+
+
+
+/* Define CSS variables */
+:root {
+  --font-inter: 'Inter';
+  --btn-gradient: linear-gradient(99deg, #2FAEF5 0%, #1140FF 100%);
+
+  ;
+
+  /* Font sizes */
+  --lg: 3.125rem;
+  --h1: 2.625rem;
+  --h2: 2rem;
+  --h3: 1.5rem;
+  --h4: 1.625rem;
+  --h5: 1.25rem;
+  --h6: 1rem;
+  --sm: 0.875rem;
+  --xs: 0.75rem;
+}
+
+/* Classes */
+.bg-gradient-btn {
+  background: var(--btn-gradient);
+  background-size: 200% !important;
+  transition: background 1s ease !important;
+
+}
+
+.bg-gradient-btn:hover {
+  background-position: right center !important;
+}
+
+
+/* Base styles for iframe */
+iframe {
+  width: 100% !important;
+  /* Default width */
+  border: 0;
+  /* Removes border if present */
+}
+
+@media (max-width: 900px) {
+  iframe {
+    width: 95% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  iframe {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  iframe {
+    width: 100% !important;
+  }
+
+  .recaptcha div div div {
+    width: 100% !important;
+
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  :root {
+    --h1: 2rem;
+    --h2: 1.5rem;
+    --h3: 1.25rem;
+    --h4: 1.5rem;
+    --h5: 1rem;
+    --h6: 1rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+  :root {
+    --h1: 2rem;
+    --h2: 2rem;
+    --h3: 1.25rem;
+    --h4: 1.5rem;
+    --h5: 1rem;
+    --h6: 1rem;
+  }
+}
+
+/* 
+@media (max-width: 768px) {
+
+  :root {
+    --h1: 2.375rem;
+    --h2: 2rem
+  }
+}
+
+@media (max-width: 640px) {
+
+  :root {
+    --h1: 2.375rem;
+    --h2: 2rem
+  }
+}
+
+@media (max-width: 400px) {
+
+  :root {
+    --h1: 2.375rem;
+    --h2: 2rem;
+  }
+}
+
+@media (max-width: 430px) {
+
+  :root {
+    --h1: 2.375rem;
+    --h2: 2rem;
+
+  }
+}
+
+@media (max-width: 320px) {
+
+  :root {
+    --h1: 2.375rem;
+    --h2: 1rem;
+  }
+} */
